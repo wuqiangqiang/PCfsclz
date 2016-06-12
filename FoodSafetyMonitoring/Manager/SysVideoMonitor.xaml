@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="FoodSafetyMonitoring.Manager.SysVideoMonitor"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:usercontrols="clr-namespace:FoodSafetyMonitoring.Manager.UserControls"
+     xmlns:toolkitex="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"  >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/ListBox.xaml"/>
+                <ResourceDictionary Source="Themes/TextBlock.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0"  Margin="5,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/res/title.png"/>
+                </Grid.Background>
+                <TextBlock Margin="20,0,0,0" VerticalAlignment="Center">仪器列表</TextBlock>
+            </Grid>
+            <Border Grid.Row="1" Background="#fbfbfc" BorderThickness="1,0,1,1" BorderBrush="#e0e0e0" CornerRadius="0,0,3,3">
+                <Grid Margin="0,0,0,5">
+                    <ListBox ItemsSource ="{Binding}" x:Name="listbox1" BorderThickness="0" Background="Transparent" Width="240">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" Margin="30,6,0,6" Text="{Binding deviceno}" Tag="{Binding deviceno}" MouseDown="TextBlock_MouseDown"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1" Margin="5,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/res/title.png"/>
+                </Grid.Background>
+                <StackPanel>
+                    <TextBlock Margin="20,10,0,0" VerticalAlignment="Center">地图信息</TextBlock>
+                </StackPanel>
+            </Grid>
+            <Border Grid.Row="1" BorderThickness="1,0,1,1" BorderBrush="#e0e0e0" CornerRadius="0,0,3,3" Background="#fbfbfc">
+                <Grid  Margin="30,5,0,0"  x:Name="_detail_info_all" HorizontalAlignment="Left" Visibility="Hidden">
+                    
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

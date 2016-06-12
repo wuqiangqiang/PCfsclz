@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="FoodSafetyMonitoring.Manager.SysRoleManager"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:usercontrols="clr-namespace:FoodSafetyMonitoring.Manager.UserControls"
+     xmlns:toolkitex="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"  >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/ImageButtonStyle.xaml"/>
+                <ResourceDictionary Source="Themes/TextBox.xaml"/>
+                <ResourceDictionary Source="Themes/Button_new.xaml"/>
+                <ResourceDictionary Source="Themes/StackPanel.xaml"/>
+                <ResourceDictionary Source="Themes/ComboBox.xaml"/>
+                <ResourceDictionary Source="Themes/TextBlock.xaml"/>
+                <ResourceDictionary Source="Themes/CheckBox.xaml"/>
+                <ResourceDictionary Source="Themes/TextBox.xaml"/>
+                <ResourceDictionary Source="Themes/ListViewColumn.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0"  Margin="5,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/res/title.png"/>
+                </Grid.Background>
+                <TextBlock Margin="20,0,0,0" VerticalAlignment="Center">角色列表</TextBlock>
+            </Grid>
+            <Border Grid.Row="1" BorderThickness="1,0,1,1" BorderBrush="#e0e0e0" CornerRadius="0,0,3,3" Background="#fbfbfc">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <ListView Grid.Row="0" Name="lvlist" ItemsSource="{Binding}" BorderThickness="0" Margin="0" FontFamily="宋体" FontSize="14">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Setter Property="Height" Value="30" />
+                                <Setter Property="Margin" Value="0" />
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.Template>
+                            <ControlTemplate>
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
+                                    <ItemsPresenter />
+                                </ScrollViewer>
+                            </ControlTemplate>
+                        </ListView.Template>
+                        <ListView.View>
+                            <GridView>
+                                <GridView.ColumnHeaderContainerStyle>
+                                    <Style>
+                                        <Setter Property="FrameworkElement.Height" Value="0"/>
+                                        <Setter Property="FrameworkElement.Visibility" Value="Hidden"/>
+                                    </Style>
+                                </GridView.ColumnHeaderContainerStyle>
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Image x:Name="imageLogo"  Source="Images/role.png" Width="18" Height="18"></Image>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Width="100" Header="角色名称" DisplayMemberBinding="{Binding roleName}"></GridViewColumn>
+                                <GridViewColumn Width="35">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate >
+                                            <Button Name="btnModify" Width="18" Height="18"  Style="{StaticResource ListModifyImageButtonTemplate}" Click="btnModify_Click"  Tag="{Binding roleId}"></Button>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Width="35">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Name="btnDelete" Width="18" Height="18" Style="{StaticResource ListDeleteImageButtonTemplate}" Click="btnDelete_Click" Tag="{Binding roleId}" ></Button>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Name="btnCreate" Grid.Row="1" Width="120" Height="32" Click="btnCreate_Click" Style="{StaticResource RoleImageButtonTemplate}" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1" Margin="5,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/res/title.png"/>
+                </Grid.Background>
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0" VerticalAlignment="Center">详细信息</TextBlock>
+                </StackPanel>
+            </Grid>
+            <Border Grid.Row="1" BorderThickness="1,0,1,1" BorderBrush="#e0e0e0" CornerRadius="0,0,3,3" Background="#fbfbfc">
+                <Grid Margin="30,30,30,0" x:Name="role_details" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <!--<RowDefinition Height="37"/>-->
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Grid.Column="0" Grid.Row="0" xml:space="preserve" >角  色  名:</TextBlock>
+                        <TextBox  Grid.Column="1" Grid.Row="0" Name="txt_RoleName" Width="200" HorizontalAlignment="Left"/>
+                        <TextBlock  Grid.Column="0" Grid.Row="1">角色说明:</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="1" Name="txt_RoleExplain"  Width="200" HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" xml:space="preserve"  >角色级别:</TextBlock>
+                        <ComboBox Name="role_flag" Grid.Row="2" Grid.Column="1"  Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                        <!--<TextBlock Grid.Row="3" Grid.Column="0" xml:space="preserve"  >部门类别:</TextBlock>
+                        <ComboBox Name="role_type" Grid.Row="3" Grid.Column="1"  Width="200" HorizontalAlignment="Left" Margin="5,0,0,0"/>-->
+                    </Grid>
+                    <StackPanel Grid.Row="1"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Name="btnSave"  Width="120" Height="32"   Style="{StaticResource SaveImageButtonTemplate}" Click="btnSave_Click"  Margin="0,0,20,0"/>
+                        <Button Name="btnCancel"  Width="120" Height="32"  Style="{StaticResource CancelImageButtonTemplate}" Click="Clear_Click" Margin="20,0,0,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

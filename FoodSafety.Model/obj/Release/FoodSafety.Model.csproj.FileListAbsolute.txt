@@ -1,0 +1,17 @@
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.Model\bin\Release\FoodSafety.Model.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.Model\bin\Release\FoodSafety.Model.pdb
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.csprojResolveAssemblyReference.cache
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.pdb
+C:\Users\Administrator\Desktop\fsclz\FoodSafety.Model\bin\Release\FoodSafety.Model.dll
+C:\Users\Administrator\Desktop\fsclz\FoodSafety.Model\bin\Release\FoodSafety.Model.pdb
+C:\Users\Administrator\Desktop\fsclz\FoodSafety.Model\bin\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.dll
+C:\Users\Administrator\Desktop\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.pdb
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.Model\bin\Release\FoodSafety.Model.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.Model\bin\Release\FoodSafety.Model.pdb
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.Model\bin\Release\MySql.Data.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.csprojResolveAssemblyReference.cache
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.Model\obj\Release\FoodSafety.Model.pdb

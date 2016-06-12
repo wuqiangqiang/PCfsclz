@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="FoodSafetyMonitoring.Manager.SysMedia"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:usercontrols="clr-namespace:FoodSafetyMonitoring.Manager.UserControls"
+    xmlns:toolkit ="http://schemas.microsoft.com/wpf/2008/toolkit">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/ComboBox.xaml"/>
+                <ResourceDictionary Source="Themes/TextBlock.xaml"/>
+                <ResourceDictionary Source="Themes/TextBox.xaml"/>
+                <ResourceDictionary Source="Themes/StackPanel.xaml"/>
+                <ResourceDictionary Source="Themes/ImageButtonStyle.xaml"/>
+                <ResourceDictionary Source="Themes/DatePicker.xaml"/>
+                <ResourceDictionary Source="Themes/ListViewColumn.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="600"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <MediaElement Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Source="/res/1.avi"></MediaElement> 
+        <Image Source="/res/1.png" Grid.Row="1" Grid.Column="0" Width="500" Height="600"/>
+    </Grid>-->
+    <Border BorderThickness="1" BorderBrush="#e0e0e0" Background="#fbfbfc">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4.5*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <MediaElement Name="mediaElement1" Source="D:\video\a.avi" LoadedBehavior="Manual" Stretch="Fill" Margin="20,5,20,5" ></MediaElement>
+            </Grid>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" BorderThickness="0,1,1,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/1.png" MouseDown="_Img1_MouseDown" Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+                <Border Grid.Column="1" BorderThickness="0,1,1,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/2.png" MouseDown="_Img2_MouseDown" Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+                <Border Grid.Column="2" BorderThickness="0,1,1,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/3.png" MouseDown="_Img3_MouseDown " Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+                <Border Grid.Column="3" BorderThickness="0,1,1,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/4.png" MouseDown="_Img4_MouseDown" Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+                <Border Grid.Column="4" BorderThickness="0,1,1,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/5.png" MouseDown="_Img5_MouseDown" Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+                <Border Grid.Column="5" BorderThickness="0,1,1,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/6.png" MouseDown="_Img6_MouseDown" Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+                <Border Grid.Column="6" BorderThickness="0,1,1,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/7.png" MouseDown="_Img7_MouseDown" Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+                <Border Grid.Column="7" BorderThickness="0,1,0,0" BorderBrush="#e0e0e0">
+                    <Image Source="/res/8.png" MouseDown="_Img8_MouseDown" Stretch="Fill" Margin="2,2,2,2"/>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,8 @@
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.DI\bin\Debug\FoodSafety.DI.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.DI\bin\Debug\FoodSafety.DI.pdb
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.DI\obj\Debug\FoodSafety.DI.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\fsclz\FoodSafety.DI\obj\Debug\FoodSafety.DI.pdb
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.DI\bin\Debug\FoodSafety.DI.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.DI\bin\Debug\FoodSafety.DI.pdb
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.DI\obj\Debug\FoodSafety.DI.dll
+F:\智锐达仪器\20160503-所有平台\佛山菜篮子\佛山菜篮子\NEWfsclz\fsclz\FoodSafety.DI\obj\Debug\FoodSafety.DI.pdb

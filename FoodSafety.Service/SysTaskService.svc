@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="FoodSafety.Service.SysTaskService" CodeBehind="SysTaskService.svc.cs" %>
